@@ -4,16 +4,23 @@ import Router from "vue-router";
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
+  hash: false,
   routes: [
     {
       path: "/",
-      redirect: "/dashboard",
+      redirect: "/begin",
       component: () => import("@/view/layout/Layout"),
       children: [
         {
           path: "/dashboard",
           name: "dashboard",
           component: () => import("@/view/pages/Dashboard.vue")
+        },
+        {
+          path: "/begin",
+          name: "begin",
+          component: () => import("@/view/pages/inicio/begin.vue")
         },
         {
           path: "/builder",
@@ -430,14 +437,20 @@ export default new Router({
       ]
     },
     {
-      path: "/",
+      path: "/login",
       component: () => import("@/view/pages/auth/Auth"),
       children: [
         {
           name: "login",
           path: "/login",
           component: () => import("@/view/pages/auth/Login")
-        },
+        }
+      ]
+    },
+    {
+      path: "/register",
+      component: () => import("@/view/pages/auth/Auth"),
+      children: [
         {
           name: "register",
           path: "/register",
@@ -454,6 +467,12 @@ export default new Router({
       path: "/404",
       name: "404",
       component: () => import("@/view/pages/error/Error-1.vue")
+    },
+    {
+      // the 404 route, when none of the above matches
+      path: "/landing",
+      name: "landing",
+      component: () => import("@/view/pages/landing/landing.vue")
     }
   ]
 });

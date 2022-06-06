@@ -20,7 +20,7 @@
         <!-- begin:: Content -->
         <div
           id="kt_content"
-          class="content d-flex flex-column flex-column-fluid"
+          class="d-flex flex-column flex-column-fluid"
         >
           <!-- begin:: Content Head -->
 
@@ -36,7 +36,7 @@
           <div class="d-flex flex-column-fluid">
             <div
               :class="{
-                'container-fluid': contentFluid,
+                'container-fluid pl-0 pr-0': contentFluid,
                 container: !contentFluid
               }"
             >
@@ -46,7 +46,7 @@
             </div>
           </div>
         </div>
-        <KTFooter></KTFooter>
+        <!-- <KTFooter></KTFooter> -->
       </div>
     </div>
     <KTStickyToolbar v-if="toolbarDisplay"></KTStickyToolbar>
@@ -59,7 +59,7 @@ import { mapGetters } from "vuex";
 import KTAside from "@/view/layout/aside/Aside.vue";
 import KTHeader from "@/view/layout/header/Header.vue";
 import KTHeaderMobile from "@/view/layout/header/HeaderMobile.vue";
-import KTFooter from "@/view/layout/footer/Footer.vue";
+// import KTFooter from "@/view/layout/footer/Footer.vue";
 import HtmlClass from "@/core/services/htmlclass.service";
 // import KTSubheader from "@/view/layout/subheader/Subheader.vue";
 import KTStickyToolbar from "@/view/layout/extras/StickyToolbar.vue";
@@ -76,7 +76,7 @@ export default {
     KTAside,
     KTHeader,
     KTHeaderMobile,
-    KTFooter,
+    // KTFooter,
     // KTSubheader,
     KTStickyToolbar,
     KTScrollTop,
@@ -123,7 +123,8 @@ export default {
      * @returns {boolean}
      */
     contentFluid() {
-      return this.layoutConfig("content.width") === "fluid";
+      return true;
+      // return this.layoutConfig("content.width") === "fluid";
     },
 
     /**

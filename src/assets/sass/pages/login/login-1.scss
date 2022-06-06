@@ -21,15 +21,16 @@
         font-family: 'Lato';
         font-style: normal;
         font-weight: 700;
-        font-size: 26px;
-        line-height: 26px;
+        font-size: 26px !important;
+        line-height: 26px !important;
         margin-top: 40px;
+        color: #002B5C!important;
     }
     .login-header-playing{
         font-family: 'Lato';
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 16px !important;
         line-height: 16px;
         margin-top: 30px;
     }
@@ -63,14 +64,14 @@
             font-family: 'Lato';
             font-style: normal;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 18px !important;
             line-height: 18px;
         }
         #kt_login_forgot{
             font-family: 'Lato';
             font-style: normal;
             font-weight: 400;
-            font-size: 14px;
+            font-size: 14px !important;
             line-height: 16px;
             /* identical to box height, or 114% */
 

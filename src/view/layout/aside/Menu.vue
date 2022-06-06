@@ -1,6 +1,83 @@
 <template>
   <ul class="menu-nav">
     <router-link
+      to="/begin"
+      v-slot="{ href, navigate, isActive, isExactActive }"
+    >
+      <li
+        aria-haspopup="true"
+        data-menu-toggle="hover"
+        class="menu-item"
+        :class="[
+          isActive && 'menu-item-active',
+          isExactActive && 'menu-item-active'
+        ]"
+      >
+        <a :href="href" class="menu-link" @click="navigate">
+          <i class="menu-icon flaticon2-menu-2"></i>
+          <span class="menu-text">Inicio</span>
+        </a>
+      </li>
+    </router-link>
+    <router-link
+      to="/begin"
+      v-slot="{ href, navigate, isActive, isExactActive }"
+    >
+      <li
+        aria-haspopup="true"
+        data-menu-toggle="hover"
+        class="menu-item"
+        :class="[
+          isActive && 'menu-item-active',
+          isExactActive && 'menu-item-active'
+        ]"
+      >
+        <a :href="href" class="menu-link" @click="navigate">
+          <i class="menu-icon flaticon2-cubs"></i>
+          <span class="menu-text">Superhéroes destacados</span>
+        </a>
+      </li>
+    </router-link>
+    <router-link
+      to="/begin"
+      v-slot="{ href, navigate, isActive, isExactActive }"
+    >
+      <li
+        aria-haspopup="true"
+        data-menu-toggle="hover"
+        class="menu-item"
+        :class="[
+          isActive && 'menu-item-active',
+          isExactActive && 'menu-item-active'
+        ]"
+      >
+        <a :href="href" class="menu-link" @click="navigate">
+          <i class="menu-icon flaticon2-email"></i>
+          <span class="menu-text">Mensajes</span>
+        </a>
+      </li>
+    </router-link>
+    <router-link
+      to="/begin"
+      v-slot="{ href, navigate, isActive, isExactActive }"
+    >
+      <li
+        aria-haspopup="true"
+        data-menu-toggle="hover"
+        class="menu-item"
+        :class="[
+          isActive && 'menu-item-active',
+          isExactActive && 'menu-item-active'
+        ]"
+      >
+        <a :href="href" class="menu-link" @click="navigate">
+          <i class="menu-icon flaticon2-email"></i>
+          <span class="menu-text">Sala de batalla</span>
+        </a>
+      </li>
+    </router-link>
+
+    <router-link
       to="/dashboard"
       v-slot="{ href, navigate, isActive, isExactActive }"
     >
@@ -1898,15 +1975,56 @@
         </ul>
       </div>
     </li>
+
+    <li class="mt-10">
+      <div class="logout-action" @click="onLogout">
+        <span class="material-icons mr-3 mb-0">
+        meeting_room
+        </span>
+        <h4 class="mr-7 mb-0">Logout</h4>
+      </div>
+    </li>
   </ul>
 </template>
 
+<style scoped>
+.logout-action{
+    height: 50px;
+    width: 200px;
+    background: #FFE4E6;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red !important;
+}
+.menu-item.menu-item-active > .menu-link {
+    background-color: #E0F2FE !important;
+}
+.menu-text{
+  color: black !important;
+}
+.menu-item{
+background-color: #F0F9FF !important;
+
+}
+.menu-item :hover{
+   background-color: #E0F2FE !important;
+}
+</style>
 <script>
+import { LOGOUT } from "@/core/services/store/auth.module";
 export default {
   name: "KTMenu",
   methods: {
     hasActiveChildren(match) {
       return this.$route["path"].indexOf(match) !== -1;
+    },
+    onLogout() {
+      this.$store
+        .dispatch(LOGOUT)
+        .then(() => this.$router.push({ name: "login" }));
     }
   }
 };

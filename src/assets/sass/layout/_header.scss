@@ -10,7 +10,7 @@
 		height: 120px;
 		// height: get($header-config, desktop, default, height);
 		position: relative;
-		z-index: 9;
+		z-index: 99 !important;
 		box-shadow: 8px -9px 11px 7px !important;
 
 		// Fixed Header Mode
@@ -23,7 +23,78 @@
 			z-index:9;
 			box-shadow: 8px -9px 11px 7px !important;
 		}
+		.header-logo{
+			margin-left: 20px;
+		}
+		.week-free-icon{
+			background-color: #FFFFFF !important;
+			border-radius: 50%;
+			display: flex;
+		}
+		.teacher-help {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 16px !important;
+			line-height: 16px;
+			/* identical to box height, or 100% */
 
+			text-decoration-line: underline;
+
+			/* Azul iconos */
+			color: #007CC2 !important;
+
+		}
+		.bank-card-detail{
+			font-family: 'Lato';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 14px !important;
+			line-height: 20px;
+			/* identical to box height, or 143% */
+
+			text-align: center;
+
+			color: #48A83E;
+			p{
+				margin-top: 10px !important;
+				margin-bottom: 0 !important;
+			}
+		}
+		.session-landing{
+			margin-right: 25px;
+			.sesstion-button{
+				background-color: #007CC2 !important;
+				height: 60px !important;
+				font-family: 'Lato';
+				font-style: normal;
+				font-weight: 700;
+				font-size: 20px !important;
+				line-height: 20px;
+				/* identical to box height, or 100% */
+
+				text-align: right;
+
+				/* Blanco */
+
+				color: #FFFFFF !important;
+			}
+		}
+		.week-free-button {
+			background-color: #48A83E !important;
+			font-family: 'Lato';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 20px !important;
+			line-height: 20px;
+			height: 60px !important;
+			/* identical to box height, or 100% */
+			padding: 8px 11px 8px 3px !important;
+			text-align: right;
+
+			/* Blanco */
+
+			color: #FFFFFF !important;
+		}
 		// Aside Enabled Mode
 		.aside-enabled & {
 			&.header-fixed {
@@ -37,8 +108,8 @@
 		}
 
 		// Fixed Header & Fixed Subheader Modes
-		.header-fixed.subheader-fixed & {
-			box-shadow: none !important;
-		}
+		// .header-fixed.subheader-fixed & {
+		// 	box-shadow: none !important;
+		// }
 	}
 }

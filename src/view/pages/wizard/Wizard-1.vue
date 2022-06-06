@@ -1073,7 +1073,8 @@ export default {
     });
 
     // Change event
-    wizard.on("change", function(/*wizardObj*/) {
+    wizard.on("change", function(wizardObj) {
+       console.log(wizardObj.currentStep);
       setTimeout(() => {
         KTUtil.scrollTop();
       }, 500);

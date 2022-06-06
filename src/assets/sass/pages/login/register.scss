@@ -1,0 +1,88 @@
+
+.register-form {
+    width: 800px;
+    background-color: white !important;
+    padding: 20px;
+    border-radius: 10px;
+    padding:40px 90px 40px 90px !important;
+}
+.continue{
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.register-border{
+  height: 2px;
+  width: 100%;
+  background-color: rgb(241, 236, 236);
+  margin: 0px 15px 25px 15px;
+}
+.contiuneButton{
+    background-color: #48A83E !important ;
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 20px !important;
+line-height: 20px;
+/* identical to box height, or 100% */
+
+
+/* Blanco */
+
+color: #FFFFFF;
+}
+.step-body{
+  margin-top: 20px;
+}
+.spinner.spinner-right {
+    padding-right: 3.5rem !important;
+  }
+  .step2-button{
+    color: white !important;
+  }
+  .step3-button{
+    color: white !important;
+  }
+  .step1-button{
+    background-color: #5F3FB1 !important;
+    color: white !important;
+  }
+  .step-header-title{
+    display: flex;
+    justify-content: space-between;
+    p{
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 30px;
+      /* identical to box height, or 100% */
+  
+  
+      color: #002B5C;
+      }
+  }
+  .steps{
+    display: flex;
+    hr{
+      border-top: 2px dotted #000;
+      width: 100%;
+      margin-top: 25px;
+    }
+  }
+  .step-title{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+ 
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px !important;
+      line-height: 16px;
+      /* identical to box height, or 100% */
+  
+      text-align: center;
+  
+      color: #002B5C !important;
+       
+  }
