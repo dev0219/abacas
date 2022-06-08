@@ -22,6 +22,19 @@
     align-items: center;
     }
 }
+// .userinfo{
+//     position: fixed;
+//     /* width: 50%; */
+//     flex-direction: unset;
+//     justify-content: space-between;
+//     z-index: 9;
+// }
+.backspace{
+     img{
+        margin-top: 20px;
+        cursor: pointer;
+     }
+}
 .learn-platform{
     background-color: #62CC69 !important;
     padding: 4px;

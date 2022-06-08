@@ -4,7 +4,7 @@
     <KTHeaderMobile></KTHeaderMobile>
     <!-- end:: Header Mobile -->
 
-    <Loader v-if="loaderEnabled" v-bind:logo="loaderLogo"></Loader>
+    <Loader v-if="loaderEnabled" v-bind:logo="require('@/assets/images/fastmind.png')"></Loader>
 
     <!-- begin::Body -->
     <div class="d-flex flex-row flex-column-fluid page">
@@ -49,7 +49,7 @@
         <!-- <KTFooter></KTFooter> -->
       </div>
     </div>
-    <KTStickyToolbar v-if="toolbarDisplay"></KTStickyToolbar>
+    <!-- <KTStickyToolbar v-if="toolbarDisplay"></KTStickyToolbar> -->
     <KTScrollTop></KTScrollTop>
   </div>
 </template>
@@ -62,7 +62,7 @@ import KTHeaderMobile from "@/view/layout/header/HeaderMobile.vue";
 // import KTFooter from "@/view/layout/footer/Footer.vue";
 import HtmlClass from "@/core/services/htmlclass.service";
 // import KTSubheader from "@/view/layout/subheader/Subheader.vue";
-import KTStickyToolbar from "@/view/layout/extras/StickyToolbar.vue";
+// import KTStickyToolbar from "@/view/layout/extras/StickyToolbar.vue";
 import KTScrollTop from "@/view/layout/extras/ScrollTop";
 import Loader from "@/view/content/Loader.vue";
 import {
@@ -78,7 +78,7 @@ export default {
     KTHeaderMobile,
     // KTFooter,
     // KTSubheader,
-    KTStickyToolbar,
+    // KTStickyToolbar,
     KTScrollTop,
     Loader
   },

@@ -124,14 +124,14 @@
                          El ábaco japonés es una herramienta visio-espacial muy antigua que sirve para formar imágenes matemáticas en la mente de los niños, reforzando el desarrollo sensorial para la concentración, razonamiento matemático, la creatividad, la lectura, el, la observación, la conceptualización y muchos otros beneficios asociados con el cerebro.
 
                          <div class="youtube-icon">                            
-                            <router-link to="#" class="video"><v-img class="youtube-img" src="media/logos/youtube.png"></v-img>&nbsp;&nbsp; Ve nuestro video explicativo</router-link>
+                            <router-link to="#" class="video"><v-img class="youtube-img" :src="require('@/assets/images/youtube.png')"></v-img>&nbsp;&nbsp; Ve nuestro video explicativo</router-link>
                          </div>
                     </div>
                 </div>
             </v-col>
             <v-col cols="6">
                 <div class="About-us">
-                    <v-img class="cerebro" src="media/logos/Cerebro.png"></v-img>
+                    <v-img class="cerebro" :src="require('@/assets/images/Cerebro.png')"></v-img>
                 </div>
             </v-col>
         </v-row>

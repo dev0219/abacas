@@ -20,7 +20,7 @@
       </li>
     </router-link>
     <router-link
-      to="/begin"
+      to="/xxx"
       v-slot="{ href, navigate, isActive, isExactActive }"
     >
       <li
@@ -33,13 +33,13 @@
         ]"
       >
         <a :href="href" class="menu-link" @click="navigate">
-          <i class="menu-icon flaticon2-cubs"></i>
+          <i class="menu-icon flaticon2-cup"></i>
           <span class="menu-text">Superhéroes destacados</span>
         </a>
       </li>
     </router-link>
     <router-link
-      to="/begin"
+      to="/xxx"
       v-slot="{ href, navigate, isActive, isExactActive }"
     >
       <li
@@ -52,13 +52,13 @@
         ]"
       >
         <a :href="href" class="menu-link" @click="navigate">
-          <i class="menu-icon flaticon2-email"></i>
+          <i class="menu-icon flaticon-comment"></i>
           <span class="menu-text">Mensajes</span>
         </a>
       </li>
     </router-link>
     <router-link
-      to="/begin"
+      to="/xxx"
       v-slot="{ href, navigate, isActive, isExactActive }"
     >
       <li
@@ -71,13 +71,20 @@
         ]"
       >
         <a :href="href" class="menu-link" @click="navigate">
-          <i class="menu-icon flaticon2-email"></i>
+          <i class="menu-icon flaticon2-infographic"></i>
           <span class="menu-text">Sala de batalla</span>
         </a>
       </li>
     </router-link>
-
-    <router-link
+    <li>
+      <div class="logout-action" @click="onLogout">
+        <span class="material-icons mr-3 mb-0">
+        meeting_room
+        </span>
+        <h4 class="mr-7 mb-0">Logout</h4>
+      </div>
+    </li> 
+    <!-- <router-link
       to="/dashboard"
       v-slot="{ href, navigate, isActive, isExactActive }"
     >
@@ -1983,7 +1990,7 @@
         </span>
         <h4 class="mr-7 mb-0">Logout</h4>
       </div>
-    </li>
+    </li> -->
   </ul>
 </template>
 

@@ -23,6 +23,21 @@ export default new Router({
           component: () => import("@/view/pages/inicio/begin.vue")
         },
         {
+          path: "/begin/:id",
+          name: "beginItem",
+          component: () => import("@/view/pages/inicio/learnabacus.vue")
+        },
+        {
+          path: "/begin/acumula/:id",
+          name: "acumula",
+          component: () => import("@/view/pages/inicio/acmula.vue")
+        },
+        {
+          path: "/begin/:id/:abacus_id",
+          name: "beginItem",
+          component: () => import("@/view/pages/inicio/abacusstep.vue")
+        },
+        {
           path: "/builder",
           name: "builder",
           component: () => import("@/view/pages/Builder.vue")
@@ -437,26 +452,14 @@ export default new Router({
       ]
     },
     {
+      name: "login",
       path: "/login",
-      component: () => import("@/view/pages/auth/Auth"),
-      children: [
-        {
-          name: "login",
-          path: "/login",
-          component: () => import("@/view/pages/auth/Login")
-        }
-      ]
+      component: () => import("@/view/pages/auth/Login")
     },
     {
+      name: "register",
       path: "/register",
-      component: () => import("@/view/pages/auth/Auth"),
-      children: [
-        {
-          name: "register",
-          path: "/register",
-          component: () => import("@/view/pages/auth/Register")
-        }
-      ]
+      component: () => import("@/view/pages/auth/Register")
     },
     {
       path: "*",

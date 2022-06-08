@@ -9,7 +9,7 @@
       <div
         class="flex-row-fluid d-flex flex-column position-relative p-7 overflow-hidden"
       >
-        <div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
+        <div class="d-flex flex-column-fluid flex-center mt-20 mb-10">
           <router-view></router-view>
         </div>
       </div>

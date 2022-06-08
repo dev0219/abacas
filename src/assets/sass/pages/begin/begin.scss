@@ -24,6 +24,119 @@
         margin-bottom: 0px !important;
     }
 }
+.equation{
+    padding: 20px 0px 20px 0px;
+    border-right: 2px solid #f0e3e3;
+    background: #fff;
+    border-top-left-radius: 10px;
+    .equation-title{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px !important;
+        line-height: 18px !important;
+        /* identical to box height, or 100% */
+
+
+        color: #007CC2 !important;
+    }
+    .equation-exp{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px !important;
+        line-height: 30px !important;
+        /* identical to box height, or 100% */
+        
+        
+        color: #626262 !important;
+    }
+}
+.pagenation{
+    width: 37px;
+    height: 37px;
+    border: 1px solid rgb(236, 221, 221);
+    background: white;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.expression-pageniation{
+    background: #E8F7FF;
+border-radius: 0px 0px 9px 9px;
+padding: 10px 0px 10px 0px;
+justify-content: center;
+}
+.response{
+    padding: 20px 0px 20px 0px;
+    
+    border-top-right-radius: 10px;
+    background: #fff;
+    .res-body{
+        justify-content: space-evenly;
+        input{
+            border:1px solid gray;
+            border-radius: 9px;
+            width: 40%;
+        }
+        .response-btn{
+            background-color: #007CC2 !important;
+            width: 40%;
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px !important;
+            line-height: 14px !important;
+            /* identical to box height, or 100% */
+            padding: 22px;
+            border-radius: 9px;
+
+            color: #FFFFFF !important;
+        }
+    }
+    .equation-title{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px !important;
+        line-height: 18px !important;
+        /* identical to box height, or 100% */
+
+
+        color: #007CC2 !important;
+    }
+}
+.expression-step{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.expression-title{
+    padding-left: 15%;
+    padding-right: 15%;
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 30px !important;
+line-height: 30px !important;
+/* identical to box height, or 100% */
+text-align: left;
+
+
+color: #007CC2 !important;
+}
+.lock-screen {
+    height: 400px;
+    position: absolute;
+    background: #817373;
+    z-index: 99;
+    width: 315px;
+    opacity: 0.4;
+    border-radius: 10px;
+    color: #f5deb3;
+    padding: 20px 0px 10px 250px;
+}
 .openabacus{
     background-color: #62CC69;
     border-bottom-left-radius: 10px;
@@ -88,6 +201,144 @@
         }
     }
 }
+.course-title{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px !important;
+    line-height: 30px !important;
+    /* identical to box height, or 100% */
+    
+    text-align: center !important;
+    
+    color: #007CC2 !important;
+}
+.videoscreen{
+    z-index: 100000;
+}
+.backdrop{
+    opacity: 0.46;
+    background-color: #212121;
+    border-color: #212121;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+}
+.lesson-video{
+    background-color: white;
+    height: 250px;
+    width: 315px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center; 
+    div{
+        margin: auto;
+    }
+    p{
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 600 !important;
+        font-size: 18px !important;
+        line-height: 18px !important;
+        /* identical to box height, or 100% */
+
+        text-decoration-line: underline !important;
+
+        color: #009BDB !important;
+    }
+}
+.avance{
+    background-color: #009BDB;
+    height: 150px;
+    width: 315px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px 10px 10px 10px;
+ 
+    .avance-title{
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 16px;
+/* identical to box height, or 100% */
+
+
+color: #FFFFFF;
+    }
+    .avance-divider{
+        background-color: white;
+        height: 2px;
+        width: 100%;
+    }
+    .recompensas-title{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px !important;
+        line-height: 16px !important;
+        /* identical to box height, or 100% */
+        margin-top: 10px;
+
+
+        color: #FFFFFF !important;
+    }
+    .recompensas-body{
+        display: flex;
+        height: 60px;
+        img{
+            width: 50px;
+            margin-top: -25px;
+        }
+        .recompensas-content{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 23px;
+            text-align: left;
+            color: #fff;
+            /* margin: 10px; */
+            padding: 0 10px 0 10px;
+            border-left: 2px solid #fff;
+            height: 40px;
+        }
+    }
+}
+.logout-action{
+    margin-top: 200px;
+}
+.cardimg{
+    position: absolute;
+    left: calc(50% - 157px);
+}
+.explain-byvideo{
+    margin: auto;
+    background-color: white;
+    height: 250px;
+    width: 315px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 0px 3px 5px 2px #e4cbcb;
+    div{
+        margin: auto;
+    }
+    p{
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 600 !important;
+        font-size: 18px !important;
+        line-height: 18px !important;
+        /* identical to box height, or 100% */
+
+        text-decoration-line: underline !important;
+
+        color: #009BDB !important;
+    }
+}
 .closeabacus{
     width: 150px;
     .closedescription{
@@ -101,5 +352,32 @@
         text-align: center;
         
         color: #0B2343 !important;
+    }
+    .description{
+        
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px !important;
+        line-height: 22px !important;
+        /* or 138% */
+
+        text-align: center !important;
+
+        color: #0B2343 !important;
+    }
+    
+    .checkcircle{
+        color: #62CC69 !important;
+    }
+    .timetostart{
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700 !important;
+        font-size: 14px !important;
+        line-height: 18px !important; 
+        /* identical to box height, or 129% */
+
+
+        color: #FCE06C !important;
     }
 }

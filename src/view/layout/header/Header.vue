@@ -5,6 +5,7 @@
     ref="kt_header"
     class="header"
     v-bind:class="headerClasses"
+    v-bind:style="!islogin?'position:fixed':'position:relative !important'"
   >
     <div
       class="container-fluid d-flex align-items-center justify-content-between"
@@ -22,7 +23,7 @@
           v-bind:class="headerMenuClasses"
         >
         <div class="header-logo">
-          <v-img src="media/logos/fastmind.png"></v-img>
+          <v-img :src="require('@/assets/images/fastmind.png')"></v-img>
         </div>
         </div>
       </div>
@@ -39,7 +40,7 @@
         <div v-if="islanding || islogin">
           <v-btn rounded class='text-capitalize week-free-button'>
             <div class="week-free-icon">
-              <img src="media/logos/checkmark.png">
+              <img :src="require('@/assets/images/checkmark.png')">
             </div>
             Prueba una semana gratis
           </v-btn>
@@ -48,7 +49,7 @@
         <div v-if="isregister">
           <v-btn rounded class='text-capitalize week-free-button'>
             <div class="week-free-icon">
-              <img src="media/logos/checkmark.png">
+              <img :src="require('@/assets/images/checkmark.png')">
             </div>
             Iniciar sesión
           </v-btn>
