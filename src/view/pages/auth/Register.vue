@@ -62,6 +62,7 @@
                           <v-col cols="6">
                             <v-text-field
                                 outlined
+                                single-line
                                 label="Nombre"
                                 prepend-inner-icon="mdi-account"
                               ></v-text-field>
@@ -69,6 +70,7 @@
                           <v-col cols="6">
                             <v-text-field
                                 outlined
+                                single-line
                                 label="Apellido"
                                 prepend-inner-icon="mdi-account"
                               ></v-text-field>
@@ -76,6 +78,7 @@
                           <v-col cols="6">
                             <v-text-field
                                 outlined
+                                single-line
                                 label="Fecha de nacimiento"
                                 prepend-inner-icon="mdi-face"
                               ></v-text-field>
@@ -86,6 +89,7 @@
                                 label="Grado escolar"
                                 
                                 outlined
+                                single-line
                                 prepend-inner-icon="mdi-school"
                               ></v-select>
                           </v-col>
@@ -108,6 +112,7 @@
                           <v-col cols="6">
                             <v-text-field
                                 outlined
+                                single-line
                                 label="Apellido del padre/madre/Tutor"
                                 prepend-inner-icon="mdi-account"
                               ></v-text-field>
@@ -116,6 +121,7 @@
                           <v-col cols="6">
                             <v-text-field
                                 outlined
+                                single-line
                                 label="País"
                                 prepend-inner-icon="mdi-face"
                               ></v-text-field>
@@ -123,6 +129,7 @@
                           <v-col cols="6">
                             <v-text-field
                                 outlined
+                                single-line
                                 label="Ciudad"
                                 prepend-inner-icon="mdi-face"
                               ></v-text-field>
@@ -130,6 +137,7 @@
                           <v-col cols="6">
                             <v-text-field
                                 outlined
+                                single-line
                                 label="Número de celular / Whats App"
                                 prepend-inner-icon="mdi-phone"
                               ></v-text-field>
@@ -137,6 +145,7 @@
                           <v-col cols="6">
                             <v-text-field
                                 outlined
+                                single-line
                                 label="Correo electrónico"
                                 prepend-inner-icon="mdi-email"
                               ></v-text-field>
@@ -153,6 +162,7 @@
                           <v-col cols="12">
                             <v-text-field
                                 outlined
+                                single-line
                                 label="Correo electrónico*"
                                 prepend-inner-icon="mdi-account"
                               ></v-text-field>
@@ -160,6 +170,7 @@
                           <v-col cols="6">
                             <v-text-field
                                 outlined
+                                single-line
                                 label="Contraseña*"
                                 prepend-inner-icon="mdi-email"
                               ></v-text-field>
@@ -167,6 +178,7 @@
                           <v-col cols="6">
                             <v-text-field
                                 outlined
+                                single-line
                                 label="Confirmar Contraseña*"
                                 prepend-inner-icon="mdi-email"
                               ></v-text-field>

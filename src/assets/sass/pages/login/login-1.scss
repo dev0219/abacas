@@ -6,7 +6,9 @@
 
 // Initialization of global variables, mixins and functions
 @import "../../init";
-
+.v-text-field--outlined legend {
+    max-width: 0 !important;
+}
 .login.login-1 {
     .login-aside {
         .aside-img {

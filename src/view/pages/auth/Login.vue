@@ -49,7 +49,8 @@
                     class="pr-7 pl-7"
                   >
                     <v-text-field
-                      outlined
+                       single-line
+                        outlined 
                       label="Nombre de usuario"
                       prepend-inner-icon="mdi-account"
                       v-model="$v.form.email.$model"
@@ -68,6 +69,7 @@
                   >
                     <v-text-field
                       outlined
+                      single-line
                       label="Contransena"
                       prepend-inner-icon="mdi-lock"
                       v-model="$v.form.password.$model"
@@ -182,6 +184,7 @@
 </template>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Courier+Prime&display=swap');
 @import "@/assets/sass/pages/login/login-1.scss";
 .spinner.spinner-right {
   padding-right: 3.5rem !important;
@@ -225,17 +228,6 @@ export default {
       },
     },
   },
-  // mounted() {
-  //     if (localStorage.getItem('reloaded_login')) {
-  //         // The page was just reloaded. Clear the value from local storage
-  //         // so that it will reload the next time this page is visited.
-  //         localStorage.removeItem('reloaded_login');
-  //     } else {
-  //         // Set a flag so that we know not to reload the page twice.
-  //         localStorage.setItem('reloaded_login', '1');
-  //         location.reload();
-  //     }
-  // },
   methods: {
     validateState(name) {
       const { $dirty, $error } = this.$v.form[name];

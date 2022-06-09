@@ -38,7 +38,8 @@
                                     <p>{{item.description}}</p>
                                 </div>
                                 </div>
-                                <div class="avance">                        
+                                <div class="avance">   
+                                    <progress id="file" :value="item.Avance" max="100" style="height:20px"> {{item.Avance}}% </progress>                     
                                     <p class="avance-title">Avance {{item.Avance}} %</p>
                                     <div class="avance-divider"></div>
                                     <p class="recompensas-title">RECOMPENSAS</p>

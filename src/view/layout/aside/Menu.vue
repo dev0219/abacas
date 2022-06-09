@@ -2008,13 +2008,24 @@
 }
 .menu-item.menu-item-active > .menu-link {
     background-color: #E0F2FE !important;
+    opacity: 1 !important;
+}
+.menu-item>.menu-link {
+    opacity: 0.4 !important;
 }
 .menu-text{
-  color: black !important;
+  font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700 !important;
+font-size: 15px !important;
+line-height: 15px;
+/* identical to box height, or 100% */
+
+
+color: #0B2343 !important;
 }
 .menu-item{
 background-color: #F0F9FF !important;
-
 }
 .menu-item :hover{
    background-color: #E0F2FE !important;

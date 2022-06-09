@@ -4,7 +4,7 @@
         <div class="row">
             <UserInfo :begin="begin"   :currentVideo="currentVideo"></UserInfo>
         </div>
-        <div class="text-center" style="margin-top:200px">
+        <div class="text-center" style="margin-top:100px">
              <img class="mt-10" :src="require('@/assets/images/bigcard.png')" @click="Stepcompleted()">
         </div>      
     </div>

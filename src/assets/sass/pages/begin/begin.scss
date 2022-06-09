@@ -13,6 +13,7 @@
     p{
         
         font-style: normal;
+        font-family: 'Open Sans';
         font-weight: 700 !important;
         font-size: 18px !important;
         line-height: 18px !important;
@@ -79,7 +80,7 @@ justify-content: center;
         input{
             border:1px solid gray;
             border-radius: 9px;
-            width: 40%;
+            width: 150px;
         }
         .response-btn{
             background-color: #007CC2 !important;
@@ -87,13 +88,18 @@ justify-content: center;
             font-family: 'Open Sans';
             font-style: normal;
             font-weight: 400;
+            width: 150px;
             font-size: 14px !important;
             line-height: 14px !important;
             /* identical to box height, or 100% */
             padding: 22px;
             border-radius: 9px;
-
+            height: 55px;
             color: #FFFFFF !important;
+            .material-icons{
+                font-size: 17px;
+                margin-left: 15px;
+            }
         }
     }
     .equation-title{
@@ -127,7 +133,7 @@ text-align: left;
 color: #007CC2 !important;
 }
 .lock-screen {
-    height: 400px;
+    height: 420px;
     position: absolute;
     background: #817373;
     z-index: 99;
@@ -170,6 +176,7 @@ color: #007CC2 !important;
     width: 250px;
     p{
         font-style: normal;
+        font-family: 'Open Sans';
         font-weight: 600 !important;
         font-size: 16px !important;
         line-height: 22px !important;
@@ -183,6 +190,7 @@ color: #007CC2 !important;
 .tools{
     width: 150px;
     height: 150px;
+    margin: auto;
     border: 2px dotted;
     border-radius: 10px;
     background-color: transparent;
@@ -253,7 +261,7 @@ color: #007CC2 !important;
 }
 .avance{
     background-color: #009BDB;
-    height: 150px;
+    height: 170px;
     width: 315px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -294,9 +302,10 @@ color: #FFFFFF;
             margin-top: -25px;
         }
         .recompensas-content{
+            font-family: 'Open Sans';
             font-style: normal;
             font-weight: 600;
-            font-size: 13px;
+            font-size: 13px !important;
             line-height: 23px;
             text-align: left;
             color: #fff;
@@ -309,6 +318,15 @@ color: #FFFFFF;
 }
 .logout-action{
     margin-top: 200px;
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 16px !important;
+line-height: 16px;
+/* identical to box height, or 100% */
+
+
+color: #FB7185 !important;
 }
 .cardimg{
     position: absolute;
@@ -342,7 +360,7 @@ color: #FFFFFF;
 .closeabacus{
     width: 150px;
     .closedescription{
-        
+        font-family: 'Open Sans';
         font-style: normal;
         font-weight: 600 !important;
         font-size: 16px !important;

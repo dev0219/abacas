@@ -7,7 +7,7 @@
 	.header {
 		display: flex;
 		justify-content: space-between;
-		height: 120px;
+		height: 100px;
 		// height: get($header-config, desktop, default, height);
 		position: relative;
 		z-index: 99 !important;
@@ -15,7 +15,7 @@
 
 		// Fixed Header Mode
 		&.header-fixed {
-			height: 120px;
+			height: 100px;
 			position: fixed;
 			top: 0;
 			right: 0;
@@ -32,6 +32,7 @@
 			display: flex;
 		}
 		.teacher-help {
+			font-family: 'Open Sans';
 			font-style: normal;
 			font-weight: 600;
 			font-size: 16px !important;

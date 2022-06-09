@@ -58,12 +58,18 @@
                 </div>
             </v-row>
             <v-row class="mt-10 mb-10">
-                <v-col lg="2" md="4" sm="6" class=" d-flex justify-content-center">
+                <v-col lg="2" md="4" sm="6" class="">
                     <div class="tools">
                         <div class="tools-screen">
                             <span class="material-icons">lock</span>
                         </div>
                     </div>
+                    <div class="mental p-2">
+                            <div class="ml-4 mr-5">
+                                <p class="mb-0 ml-2 mr-5">Batalla final</p>
+                            </div>
+                            
+                        </div>
                 </v-col>
             </v-row>
         </div>      

@@ -20,7 +20,7 @@
                                 <p class="equation-title">Respuesta</p>
                                 <div class="res-body d-flex">
                                    <input type="text"/>
-                                    <v-btn class="response-btn"  @click="pageniation(equation.id+1)">Siguiente<span class="material-icons">arrow_forward_ios</span></v-btn>
+                                    <v-btn class="text-capitalize response-btn"  @click="pageniation(equation.id+1)">Siguiente<span class="material-icons">arrow_forward_ios</span></v-btn>
                                 </div>
                             </div>
                         </div>
@@ -81,12 +81,13 @@ export default {
   },
   methods: {
      pageniation(num) {
-         this.equation = this.abacusobj.expsLst[num];
-         this.sel = num ;
          if(num == 10) {
              this.$router.push('/begin/'+this.abacusobj.id)
              localStorage.setItem('FailPost',true)
          }
+         this.equation = this.abacusobj.expsLst[num];
+         this.sel = num ;
+         
      }
   }
 }

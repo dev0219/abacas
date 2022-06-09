@@ -1,7 +1,7 @@
 <template>
     <div class="userinfo card card-custom card-stretch gutter-b w-100 p-7">        
         <div class="d-flex learning">
-            <div class="uservatar d-flex" v-bind:style="currentVideo =='explain'?'padding:0px !important;':'padding:30px !important'">
+            <div class="uservatar d-flex" v-bind:style="!begin?'padding:0px !important;':'padding:30px !important'">
                 <img :src="require('@/assets/images/Monito.png')" style="width:112px">
                 <div class="username ml-4"><p>User Name</p></div>
                 

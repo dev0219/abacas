@@ -47,6 +47,7 @@
                         >
                         <v-text-field
                             outlined
+                            single-line
                             label="Nombre*"
                             prepend-inner-icon="mdi-account"
                             v-model="$v.form.name.$model"
@@ -65,6 +66,7 @@
                         >
                         <v-text-field
                             outlined
+                            single-line
                             label="Número*"
                             prepend-inner-icon="mdi-whatsapp"
                             v-model="$v.form.number.$model"
@@ -83,6 +85,7 @@
                         >
                         <v-text-field
                             outlined
+                            single-line
                             label="correo electrónico*"
                             prepend-inner-icon="mdi-email"
                             v-model="$v.form.email.$model"
@@ -100,7 +103,7 @@
                         >
                         <button
                             ref="kt_login_signin_submit"
-                            class="login-button btn btn-success font-weight-bold px-9 py-4 my-3 font-size-3 rounded-pill w-100"
+                            class="login-landing-button btn btn-success font-weight-bold px-9 py-4 my-3 font-size-3 rounded-pill w-100"
                         >
                          Comienza ahora
                         </button>

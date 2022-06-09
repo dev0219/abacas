@@ -5,7 +5,6 @@
     ref="kt_header"
     class="header"
     v-bind:class="headerClasses"
-    v-bind:style="!islogin?'position:fixed':'position:relative !important'"
   >
     <div
       class="container-fluid d-flex align-items-center justify-content-between"
