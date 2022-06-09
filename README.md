@@ -1,4 +1,4 @@
-# metronic-vue
+# Fast mind
 
 ## Project setup
 ```
