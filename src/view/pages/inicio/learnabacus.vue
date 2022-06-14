@@ -2,10 +2,16 @@
 <template>
     <div data-app>
         
-        <div v-bind:class="currentVideo == 'explain' || currentVideo == 'completed'? 'backdrop':'nobackdrop'"></div>
+        <div v-bind:class="currentVideo == 'explain' || currentVideo == 'completed'? 'backdrop':'nobackdrop'">
+            <div class="video-miss-arrow" v-if="(currentVideo == 'explain' && !learndialogue) || (currentVideo == 'completed' && !learndialogue)">
+            <p>Ve el video para comenzar la sección</p>
+            <img :src="require('@/assets/images/videomissarrow.svg')" style="margin-right:435px;">
+        </div>
+        </div>
         <div class="row">
             <UserInfo :begin="begin"   :currentVideo="currentVideo"></UserInfo>
         </div>
+         
         <div>
             <v-row>
                 <v-col cols="12">
@@ -13,73 +19,71 @@
                         {{abacusobj.description}}
                     </div>
                 </v-col> 
-                <v-col class="text-center" lg="4" md="6" sm="12" v-bind:class="currentVideo == 'explain'?'Zindex':''">
+                <v-col cols="1"></v-col>
+                <v-col cols="4">
+                    <v-row>
+                    <v-col class="text-center" cols="12" v-bind:class="currentVideo == 'explain'?'Zindex':''">
                 
-                        <div  class="explain-byvideo" @click="onClickChild('explain')"  >
-                            <div   >
-                                <img :src="require('@/assets/images/videocard.png')">
-                                <p class="mb-0 mt-10">La Miss te explica</p>
+                            <div  class="explain-byvideo" @click="onClickChild('explain')"  >
+                                <div   >
+                                    <img :src="require('@/assets/images/videocard.svg')">
+                                    <p class="mb-0 mt-10">La Miss te explica</p>
+                                </div>
                             </div>
-                        </div>
-                        <img class="mt-7 cardimg" v-bind:class="currentVideo == 'completed'?'Zindex':'AcuZindex'" :src="require('@/assets/images/card.png')" @click="Completed()">
-               
-                    
+                            <img class="mt-7 cardimg" v-bind:class="currentVideo == 'completed'?'Zindex':'AcuZindex'" :src="require('@/assets/images/card.svg')" @click="Completed()">
+                
+                        
+                    </v-col>
+                    </v-row>
                 </v-col>
-                <v-col class="text-center" v-for="item in abacusExerciesArr" v-bind:key="item.description" lg="4" md="6" sm="12">
-                             
-                    
-                            <div class="position-relative">
-                                <div class="lock-screen" v-if="!item.timetostart">
-                                    <span class="material-icons">lock</span>
-                                </div> 
-                                <div class="lesson-video" @click="abacusCal(item.id)">
-                                <div>
-                                    <img :src="require('@/assets/images/abacuspic.png')">
-                                    <p>{{item.description}}</p>
-                                </div>
-                                </div>
-                                <div class="avance">   
-                                    <progress id="file" :value="item.Avance" max="100" style="height:20px"> {{item.Avance}}% </progress>                     
-                                    <p class="avance-title">Avance {{item.Avance}} %</p>
-                                    <div class="avance-divider"></div>
-                                    <p class="recompensas-title">RECOMPENSAS</p>
-                                    <div class="recompensas-body">
-                                        <img :src="require('@/assets/images/moneypic.png')" width="50">
-                                        <div class="recompensas-content">
-                                            <p>Termina este reto y recibe {{item.credit}} monedas de crédito</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>               
-                            
-                       
-                   
-                    
+                <v-col cols="7" style="padding-right:20px;">
+                    <v-row>
+                            <v-col class="text-center" v-for="item in abacusExerciesArr" v-bind:key="item.description" lg="6" md="12" sm="12">
+                                        <div class="position-relative">
+                                            <div class="lockscreen-body">
+                                                <div class="lock-screen" v-if="!item.timetostart">
+                                                <span class="material-icons">lock</span>
+                                            </div> 
+                                            </div>
+                                            
+                                            <div class="lesson-video" @click="abacusCal(item.id)">
+                                            <div>
+                                                <img :src="require('@/assets/images/abacuspic.png')">
+                                                <p>{{item.description}}</p>
+                                            </div>
+                                            </div>
+                                            <div class="avance">   
+                                                <progress id="file" :value="item.Avance" max="100" style="height:20px"> {{item.Avance}}% </progress>                     
+                                                <p class="avance-title">Avance {{item.Avance}} %</p>
+                                                <div class="avance-divider"></div>
+                                                <p class="recompensas-title">RECOMPENSAS</p>
+                                                <div class="recompensas-body">
+                                                    <img :src="require('@/assets/images/moneypic.svg')" width="50">
+                                                    <div class="recompensas-content">
+                                                        <p>Termina este reto y recibe {{item.credit}} monedas de crédito</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                            </v-col>
+                    </v-row>
                 </v-col>
             </v-row>
         </div>      
          <v-dialog v-model="learndialogue" max-width="500" class="videoscreen" persistent>
-              <v-card>
+             
                  <video
                     :key="VideoUrl"
                     width="500"
                     controls
+                     @click="Wahched()"
                     >
                     <source
                         :src="require('@/assets/videos/sample.mp4')"
                         type="video/mp4"
                     >
                 </video>
-                <v-card-actions>
-                  <v-btn
-                    color="green darken-1"
-                    text
-                    @click="Wahched()"
-                >
-                    Watched
-                </v-btn>
-              </v-card-actions>
-              </v-card>
+             
          </v-dialog>
     </div>
 </template>

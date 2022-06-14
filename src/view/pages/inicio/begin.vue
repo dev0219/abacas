@@ -6,17 +6,21 @@
         <div>
             <UserInfo :begin="begin" @Videoshow="onClickChild" :currentVideo="currentVideo"></UserInfo>
         </div>
+        <div class="video-arrow" v-if="(currentVideo == 'platform' && !learndialogue) || (currentVideo == 'abacus' && !learndialogue)">
+            <p>Para comenzar da clic</p>
+            <img :src="require('@/assets/images/videoarrow.svg')" v-bind:style="currentVideo == 'platform'?'margin-right:600px;':'margin-right:435px;'">
+        </div>
         <div>
             <div class="row">
                 <div class="here">
-                    <img :src="require('@/assets/images/abacas.png')" style="width:50px">
+                    <img :src="require('@/assets/images/abacas.svg')" style="width:50px">
                     <div class="here-p ml-4"><p>Aquí usas ábaco</p></div>
                 </div>
-                <v-row class="mt-5 mb-5">
+                <v-row class="mt-5 mb-5 padding-30">
                     <v-col class="text-center d-flex justify-content-center" lg="2" md="3" sm="6" v-for="(item,index) in abacusArr" v-bind:key="item.id">
                         <div>
-                            <img v-if="item.timetostart" :src="require('@/assets/images/openabacus.png')" @click="LearnAbacus(item.id)">
-                            <img v-if="!item.timetostart" :src="require('@/assets/images/closeabacus.png')">
+                            <img v-if="item.timetostart" :src="require('@/assets/images/openabacus.svg')" @click="LearnAbacus(item.id)">
+                            <img v-if="!item.timetostart" :src="require('@/assets/images/closeabacus.svg')">
                             <div class="p-2" v-if="item.timetostart" v-bind:class="item.completed?'closeabacus':'openabacus'">
                                 <p class="description">{{item.description}}</p>
                                 <p class="description">{{item.level}}</p>
@@ -32,69 +36,62 @@
                 </v-row>
             </div>
             <v-divider></v-divider>
-            <div class="mt-10 mb-10" >
-                <div class="here" style="display:inline-flex;">
-                    <img :src="require('@/assets/images/brain.png')" style="width:50px">
+            <div class="row">
+                <div class="here">
+                    <img :src="require('@/assets/images/brain.svg')" style="width:50px">
                     <div class="here-p ml-4"><p>Aquí usas tu ábaco mental</p></div>
                 </div>
-                <div class="row mt-5">
-                    <div class="col-lg-2">
-                        <img :src="require('@/assets/images/brainlock.png')" width="250px">
-                        <div class="mental p-2">
-                            <div class="ml-4 mr-5">
-                                <p class="mb-0 ml-2 mr-5">Sumas y Restas fáciles</p>
+                <v-row class="w-100 mt-5 mb-5 padding-30">
+                    <v-col class="text-center d-flex justify-content-center" lg="2" md="3" sm="6">
+                        <div>
+                            <img :src="require('@/assets/images/brainlock.png')" width="180px">
+                            <div class="mental p-2">
+                                <div class="ml-4 mr-4">
+                                    <p class="mb-0 ml-2 mr-2">Sumas y Restas fáciles</p>
+                                </div>
+                                
                             </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                
+                        </div>                        
+                    </v-col>
+                </v-row>
             </div>
             <v-divider></v-divider>
             <v-row class="mt-10">
                 <div class="here">
-                    <img :src="require('@/assets/images/abacas.png')" style="width:50px;height:41px;margin-top:5px"><img :src="require('@/assets/images/Mano.png')" style="width:50px"><img :src="require('@/assets/images/brain.png')" style="width:50px">
+                    <img :src="require('@/assets/images/abacas.svg')" style="width:50px;height:41px;margin-top:5px"><img :src="require('@/assets/images/Mano.svg')" style="width:50px"><img :src="require('@/assets/images/brain.svg')" style="width:50px">
                     <div class="here-p ml-4"><p>Aquí usas todas las herramientas</p></div>
                 </div>
             </v-row>
-            <v-row class="mt-10 mb-10">
-                <v-col lg="2" md="4" sm="6" class="">
-                    <div class="tools">
-                        <div class="tools-screen">
-                            <span class="material-icons">lock</span>
-                        </div>
-                    </div>
-                    <div class="mental p-2">
-                            <div class="ml-4 mr-5">
-                                <p class="mb-0 ml-2 mr-5">Batalla final</p>
+            <v-row class="mt-10 mb-10 padding-30">
+                <v-col lg="2" md="4" sm="6" class="text-center d-flex justify-content-center">
+                    <div>
+                        <div class="tools">
+                            <div class="tools-screen">
+                                <span class="material-icons">lock</span>
                             </div>
-                            
                         </div>
+                        <div class="mental p-2">
+                            <div class="ml-4 mr-4">
+                                <p class="mb-0 ml-2 mr-2">Batalla final</p>
+                            </div>                            
+                        </div>
+                    </div>                        
                 </v-col>
             </v-row>
         </div>      
          <v-dialog v-model="learndialogue" max-width="500" class="videoscreen" persistent>
-              <v-card>
+            
                  <video
                     :key="VideoUrl"
                     width="500"
-                    controls
+                    controls                    
+                    @click="Wahched()"
                     >
                     <source
                         :src="require('@/assets/videos/sample.mp4')"
                         type="video/mp4"
                     >
                 </video>
-                <v-card-actions>
-                  <v-btn
-                    color="green darken-1"
-                    text
-                    @click="Wahched()"
-                >
-                    Watched
-                </v-btn>
-              </v-card-actions>
-              </v-card>
          </v-dialog>
     </div>
 </template>

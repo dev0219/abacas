@@ -28,7 +28,7 @@
                             <div class="pagenation ml-2 mr-2" v-for="(item, index) in abacusobj.expsLst" v-bind:key="index" v-bind:style="sel == index?'border:1px solid':''">{{index+1}}</div>
                         </div>
                     </div>
-                    <img class="mt-8" :src="require('@/assets/images/abacusmachine.png')" style="width:70%">
+                    <img class="mt-8" :src="require('@/assets/images/abacusmachine.svg')" style="width:70%">
                 </v-col>
             </v-row>
         </div>      

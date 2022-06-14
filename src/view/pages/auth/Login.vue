@@ -29,7 +29,7 @@
 
                 <!--begin::Form-->
                 <div class="signin-logo">
-                  <v-img :src="require('@/assets/images/avlogo.png')"></v-img>
+                  <v-img :src="require('@/assets/images/avlogo.svg')"></v-img>
                 </div>
                 <b-form class="form" @submit.stop.prevent="onSubmit">
                   <div

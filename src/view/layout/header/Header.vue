@@ -4,6 +4,7 @@
     id="kt_header"
     ref="kt_header"
     class="header"
+    v-bind:style="islanding || islogin || isregister?'position:relative !important':'position:fixed !important'"
     v-bind:class="headerClasses"
   >
     <div
@@ -22,7 +23,7 @@
           v-bind:class="headerMenuClasses"
         >
         <div class="header-logo">
-          <v-img :src="require('@/assets/images/fastmind.png')"></v-img>
+          <v-img :src="require('@/assets/images/fastmind.svg')"></v-img>
         </div>
         </div>
       </div>
@@ -39,7 +40,7 @@
         <div v-if="islanding || islogin">
           <v-btn rounded class='text-capitalize week-free-button'>
             <div class="week-free-icon">
-              <img :src="require('@/assets/images/checkmark.png')">
+              <img :src="require('@/assets/images/checkmark.svg')">
             </div>
             Prueba una semana gratis
           </v-btn>
@@ -48,13 +49,13 @@
         <div v-if="isregister">
           <v-btn rounded class='text-capitalize week-free-button'>
             <div class="week-free-icon">
-              <img :src="require('@/assets/images/checkmark.png')">
+              <img :src="require('@/assets/images/checkmark.svg')">
             </div>
             Iniciar sesión
           </v-btn>
         </div>
         <div class="d-flex" v-if="!isregister && !islanding && !islogin">
-          <router-link class="teacher-help d-flex mr-7" to="#"><span class="material-icons mr-2" style="font-size:24px;">support_agent</span><p class="mb-0 mt-1">¿Necesitas ayuda de una maestra?</p></router-link>
+          <router-link class="teacher-help d-flex mr-7" to="#"><img class="mr-2" :src="require('@/assets/images/support.svg')"><p class="mb-0 mt-1">¿Necesitas ayuda de una maestra?</p></router-link>
           <span class="material-icons" style="font-size:24px;">menu</span>
         </div>
       </div>
@@ -62,7 +63,6 @@
   </div>
   <!-- end:: Header -->
 </template>
-
 <script>
 import { mapGetters } from "vuex";
 // import KTTopbar from "@/view/layout/header/Topbar.vue";

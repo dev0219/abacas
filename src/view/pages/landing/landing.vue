@@ -46,8 +46,8 @@
                             class="pr-7 pl-7"
                         >
                         <v-text-field
-                            outlined
                             single-line
+                            outlined                          
                             label="Nombre*"
                             prepend-inner-icon="mdi-account"
                             v-model="$v.form.name.$model"
@@ -65,8 +65,8 @@
                             class="pr-7 pl-7"
                         >
                         <v-text-field
-                            outlined
                             single-line
+                            outlined                            
                             label="Número*"
                             prepend-inner-icon="mdi-whatsapp"
                             v-model="$v.form.number.$model"
@@ -84,8 +84,8 @@
                         class="pr-7 pl-7"
                         >
                         <v-text-field
-                            outlined
                             single-line
+                            outlined                           
                             label="correo electrónico*"
                             prepend-inner-icon="mdi-email"
                             v-model="$v.form.email.$model"
@@ -127,14 +127,14 @@
                          El ábaco japonés es una herramienta visio-espacial muy antigua que sirve para formar imágenes matemáticas en la mente de los niños, reforzando el desarrollo sensorial para la concentración, razonamiento matemático, la creatividad, la lectura, el, la observación, la conceptualización y muchos otros beneficios asociados con el cerebro.
 
                          <div class="youtube-icon">                            
-                            <router-link to="#" class="video"><v-img class="youtube-img" :src="require('@/assets/images/youtube.png')"></v-img>&nbsp;&nbsp; Ve nuestro video explicativo</router-link>
+                            <router-link to="#" class="video"><v-img class="youtube-img" :src="require('@/assets/images/youtube.svg')"></v-img>&nbsp;&nbsp; Ve nuestro video explicativo</router-link>
                          </div>
                     </div>
                 </div>
             </v-col>
             <v-col cols="6">
                 <div class="About-us">
-                    <v-img class="cerebro" :src="require('@/assets/images/Cerebro.png')"></v-img>
+                    <v-img class="cerebro" :src="require('@/assets/images/Cerebro.svg')"></v-img>
                 </div>
             </v-col>
         </v-row>
@@ -147,6 +147,7 @@
 <!-- Load login custom page styles -->
 <style lang="scss">
 @import "@/assets/sass/pages/landing/landing.scss";
+
 </style>
 
 <script>
@@ -233,7 +234,7 @@ export default {
       errors: state => state.auth.errors
     }),
     backgroundImage() {
-      return process.env.BASE_URL + "media/logos/Frustracion.png";
+      return process.env.BASE_URL + "media/logos/Frustracion.jpg";
     }
   }
 };

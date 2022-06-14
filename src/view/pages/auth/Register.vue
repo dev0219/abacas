@@ -96,7 +96,7 @@
                         </v-row>
                         <div class="d-flex continue">
                           <router-link to="#">¿Ya tienes una cuenta?</router-link>
-                          <v-btn rounded color="warning" class="text-capitalize contiuneButton" @click="nextStep(2)">Continuar<span class="material-icons">east</span></v-btn>
+                          <v-btn rounded color="warning"  style="width:200px !important"  class="text-capitalize contiuneButton" @click="nextStep(2)">Continuar<span class="material-icons">arrow_forward</span></v-btn>
                         </div>
                       
                     </div>
@@ -123,7 +123,7 @@
                                 outlined
                                 single-line
                                 label="País"
-                                prepend-inner-icon="mdi-face"
+                                prepend-inner-icon="mdi-map-marker"
                               ></v-text-field>
                           </v-col>
                           <v-col cols="6">
@@ -131,7 +131,7 @@
                                 outlined
                                 single-line
                                 label="Ciudad"
-                                prepend-inner-icon="mdi-face"
+                                prepend-inner-icon="mdi-map-marker"
                               ></v-text-field>
                           </v-col>
                           <v-col cols="6">
@@ -154,7 +154,7 @@
                         <div class="d-flex continue">
                           <router-link to="#" v-if="step == 1">¿Ya tienes una cuenta?</router-link>
                           <v-icon v-if="step == 2">xxxx</v-icon>
-                          <v-btn rounded color="warning" class="text-capitalize contiuneButton" @click="nextStep(3)">Continuar<span class="material-icons">east</span></v-btn>
+                          <v-btn rounded color="warning" style="width:200px !important" class="text-capitalize contiuneButton" @click="nextStep(3)">Continuar<span class="material-icons">arrow_forward</span></v-btn>
                         </div>
                     </div>
                     <div class="step3" v-if="step == 3">
@@ -191,7 +191,7 @@
                               <li>Al menos una mayúscula</li>
                             </ul> 
                           </div>
-                          <v-btn rounded color="warning" class="text-capitalize contiuneButton">Registrar y comenzar</v-btn>
+                          <v-btn rounded color="warning"  style="width:249px !important"  class="text-capitalize contiuneButton">Registrar y comenzar</v-btn>
                         </div>
                     </div>
                 </div>

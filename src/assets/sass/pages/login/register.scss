@@ -9,7 +9,23 @@
 .continue{
     justify-content: space-between;
     margin-top: 20px;
+    a{
+      padding-top: 15px;
+    }
+    li{
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px !important;
+      line-height: 14px;
+      /* identical to box height, or 100% */
+      
+      
+      color: #A6A6A6 !important;
+       
+    }
 }
+
 .register-border{
   height: 2px;
   width: 100%;
@@ -20,19 +36,34 @@
     background-color: #48A83E !important ;
     font-family: 'Lato';
 font-style: normal;
+padding: 20px 25px 20px 25px !important;
 font-weight: 700;
 padding: 20px !important;
 font-size: 20px !important;
 line-height: 20px;
+height: 60px !important;
+letter-spacing: 0px !important;
 /* identical to box height, or 100% */
 
 
 /* Blanco */
 
-color: #FFFFFF;
+color: #FFFFFF !important;
+.material-icons{
+  margin-left: 5px;
+}
 }
 .step-body{
   margin-top: 20px;
+  .v-icon{
+    color: #2196F3 !important;
+  }
+}
+.v-select__slot{
+  margin-left: 10px !important;
+}
+.v-text-field__slot{
+  margin-left: 10px !important;
 }
 .spinner.spinner-right {
     padding-right: 3.5rem !important;

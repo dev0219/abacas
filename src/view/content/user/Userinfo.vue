@@ -2,7 +2,7 @@
     <div class="userinfo card card-custom card-stretch gutter-b w-100 p-7">        
         <div class="d-flex learning">
             <div class="uservatar d-flex" v-bind:style="!begin?'padding:0px !important;':'padding:30px !important'">
-                <img :src="require('@/assets/images/Monito.png')" style="width:112px">
+                <img :src="require('@/assets/images/Monito.svg')" style="width:112px">
                 <div class="username ml-4"><p>User Name</p></div>
                 
             </div>
@@ -10,19 +10,19 @@
                 <div v-if="begin" class="d-flex mt-3">
                     <v-card class="learn-platform mr-6" v-bind:class="currentVideo=='platform'?'videodisplay':'novideodisplay'" width="150" height="150" @click="VideoClick('platform')">
                         <div class="learn-byvideo text-center">
-                            <img :src="require('@/assets/images/youtube.png')" style="width:50px">
+                            <img :src="require('@/assets/images/youtube.svg')" style="width:50px">
                             <p>¡Aprende a usar la plataforma!</p>
                         </div>
                     </v-card>
                     <v-card class="learn-platform" width="150" height="150" @click="VideoClick('abacus')"  v-bind:class="currentVideo=='abacus'?'videodisplay':'novideodisplay'" >
                         <div class="learn-byvideo use-abacus  text-center">
-                            <img :src="require('@/assets/images/abacas.png')" style="width:50px">
+                            <img :src="require('@/assets/images/abacas.svg')" style="width:50px">
                             <p>¡Aprende a usar el ábaco!</p>
                         </div>
                     </v-card>
                 </div> 
                 <div class="backspace" v-if="!begin">
-                    <img :src="require('@/assets/images/back.png')" @click="backspace()">
+                    <img :src="require('@/assets/images/back.svg')" @click="backspace()">
                 </div>               
             </div>
         </div>
